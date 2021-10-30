@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+ul li
+{
+  display:inline;
+  cursor:pointer;
+}
+ul li a
+{
+  
+  text-decoration:NONE;
+  margin-left:5px;
+  color: brown
+}
+.active
+{
+  color:blue;
+}
+.black
+{
+  color: brown;
+}
+</style>
+<h2>My First JavaScript</h2>
+
+<ul id="ulid">
+  <li class="nav-item "><a href="#" >Home</a></li>  
+  <li class="nav-item "><a href="#" >Service</a></li>
+  <li class="nav-item "><a href="#" >About us</a></li>
+  <li class="nav-item "><a href="#" >Contact us</a></li>
+</ul>
+
+<script>
+    // const li = document.querySelector('li');
+    // const activeclass=()=>
+    // {
+    //     for(i = 0;i<li.length;i++)
+    //     {
+    //        let a = li[i].getElementsByTagName('a')[0];
+    //        a.classList.add('active'); 
+    //     } 
+    // }
+    // li.addEventListener('click', activeclass);
+
+    const li = document.querySelectorAll('li');
+    li.forEach(li=>
+    {
+      li.addEventListener('click', function()
+      {
+         li.forEach(li=>li.classList.remove('active'));
+         this.classList.add('active');
+      });
+    });
+    
+</script>
+
+</body>
+</html> 
