@@ -10043,15 +10043,34 @@ footer .news button
     position: fixed;
     bottom: 0;
     right: 0%;
-    max-width: 420px;
-    height: auto;
+    width: 420px;
+    max-height: 350px;
     border: 2px solid purple;
     border-radius: 3px;
     z-index: 55555;
     padding: 25px 10px 15px;
     display: none;
     background: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
     transition: all 0.3s ease;
+}
+.price-div::-webkit-scrollbar
+{
+    border-radius: 10px;
+    height: 10px;
+    width: 5.4px;
+}
+.price-div::-webkit-scrollbar-thumb
+{
+    background: rgba(128, 0, 128, 0.8);
+    border-radius: 10px;
+}
+.price-div::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background: rgba(128, 0, 128, 0.5);
+    width: 5.4px;
 }
 .price-div .close-btn
 {
